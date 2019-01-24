@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  Home({Key key, this.title}) : super(key: key);
+class Counter extends StatefulWidget {
+  Counter({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  HomeState createState() => HomeState();
+  CounterState createState() => CounterState();
 }
 
-class HomeState extends State<Home> {
+class CounterState extends State<Counter> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -27,9 +27,8 @@ class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-//        backgroundColor: Colors.black12,
         appBar: AppBar(
-          title: Text("Home"),
+          title: Text("Counter"),
         ),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -58,10 +57,6 @@ class HomeState extends State<Home> {
                   padding: EdgeInsets.all(4.0),
                 ),
               ],
-            ),
-            RaisedButton(
-              child: Text('Open route'),
-              onPressed: () => Navigator.of(context).pushNamed("/register"),
             ),
           ]),
         ),
