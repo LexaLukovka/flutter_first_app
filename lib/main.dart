@@ -1,5 +1,4 @@
-import 'package:flutter_app/routes.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_app/store.dart';
 
-void main() {
-  Routes();
-}
+void main() => runApp(StoreApp());
